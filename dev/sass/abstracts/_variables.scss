@@ -11,6 +11,7 @@ $font-secondary: "arial";
 $font-size-base: calcularrem(16px);
 
 $font-size-nav: calcularrem(18px);
+$font-size-logotipo-desktop: calcularrem(39px);
 
 $font-size-titulo: calcularrem(36px);
 $font-size-seleccionado: calcularrem(18px);
@@ -42,7 +43,9 @@ $color-fondo-boton-enviar: $naranja;
 
 
 //-------------------- HEIGHTS NAV -------------------- //
-$nav-height: calcularrem(50px);
+$nav-height-small: calcularrem(50px);
+$nav-height-medium: calcularrem(60px);
+$nav-height-large: calcularrem(80px);
 
 //-------------------- HEIGHTS GRIDS -------------------- //
 $grid-height: calcularrem(580px);

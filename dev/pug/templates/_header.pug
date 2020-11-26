@@ -1,35 +1,42 @@
 header.header
     nav.header__header-nav
+
         label(class="header-nav__label", for="click")
-            img(src="./assets/img/svg/menu_hamburguesa.svg", alt="icono menu hamburguesa")
+            img(class="header-nav__imagen", src="./assets/img/svg/menu_hamburguesa.svg", alt="icono menu hamburguesa")
         input(class="header-nav__input", type="checkbox", name="click", id="click")
+        h1(class="header-nav__logo") logotipo
         ul.header-nav__ul-header
+            
             li.ul-header__menu__index
                 if currentpage == "index"
-                    a(class="header-nav__inicio", href="#")
+                    a(class="header__menu__inicio", href="#")
                         | Inicio
                 else
-                    a(class="header-nav__inicio", href="index.html")
+                    a(class="header__menu__inicio", href="index.html")
                         | Inicio
             li.ul-header__menu__proyectos
                 if currentpage == "proyectos"
-                    a(class="header-nav__proyectos", href="#")
+                    a(class="header__menu__proyectos", href="#")
                         | Proyectos
                 else
-                    a(class="header-nav__proyectos", href="proyectos.html")
+                    a(class="header__menu__proyectos", href="proyectos.html")
                         | Proyectos
+
+            li.ul-header__menu__logotipo
+                h1(class="header__menu__logo") logotipo
+
             li.ul-header__menu__quienes
                 if currentpage == "quienes"
-                    a(class="header-nav__quienes", href="#")
+                    a(class="header__menu__quienes", href="#")
                         | Quienes somos
                 else
-                    a(class="header-nav__quienes", href="quienes.html")
+                    a(class="header__menu__quienes", href="quienes.html")
                         | Quienes somos
             
             li.ul-header__menu__contactar
                 if currentpage == "contactar"
-                    a(class="header-nav__contactar", href="#")
+                    a(class="header__menu__contactar", href="#")
                         | Contactar
                 else
-                    a(class="header-nav__contactar", href="contactar.html")
+                    a(class="header__menu__contactar", href="contactar.html")
                         | Contactar

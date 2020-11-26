@@ -36,15 +36,34 @@ body {
 /* **************************** */
 .header {
   background-color: #c4c4c4;
-  height: 3.125rem;
   width: 100%;
+}
+@media only screen and (max-device-width: 319px) and (orientation: portrait) {
+  .header {
+    height: 3.125rem;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) and (orientation: portrait) {
+  .header {
+    height: 3.125rem;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1365px) and (orientation: portrait) {
+  .header {
+    height: 3.75rem;
+  }
+}
+@media only screen and (min-width: 1366px) {
+  .header {
+    height: 5rem;
+  }
 }
 
 @media only screen and (max-device-width: 319px) and (orientation: portrait) {
   .header__header-nav {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     height: 100%;
     width: 100%;
@@ -59,6 +78,14 @@ body {
     height: 100%;
     width: 100%;
   }
+}
+
+.header-nav__logo {
+  flex-grow: 2;
+  /* align-self: flex-start; */
+  /* justify-self: center; */
+  text-align: center;
+  width: 100%;
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1365px) {
@@ -80,6 +107,21 @@ body {
 
 .header-nav__ul-header {
   display: none;
+}
+
+.header__menu__logo,
+.header-nav__logo {
+  text-transform: uppercase;
+}
+
+.header__menu__logo {
+  font-size: 2.4375rem;
+}
+
+@media only screen and (min-width: 1366px) {
+  .header-nav__logo {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 1366px) {
