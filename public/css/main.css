@@ -140,6 +140,20 @@ body {
   }
 }
 
+.header-nav__logo {
+  max-width: 10%;
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1365px) and (orientation: portrait) {
+  .header-nav__logo {
+    max-width: 3rem;
+  }
+}
+@media only screen and (min-width: 1366px) {
+  .header-nav__logo {
+    max-width: 4.9375rem;
+  }
+}
+
 /* **************************** */
 /* FOOTER */
 /* **************************** */

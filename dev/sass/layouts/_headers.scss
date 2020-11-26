@@ -173,6 +173,33 @@
 }
 
 
+.header-nav__logo
+{
+
+    max-width: 10%;
+    @include mediaquery(mobile-peke) {
+        max-width: $icono-small;
+
+    }
+
+    @include mediaquery(mobile)
+    {
+        max-width: $icono-small;
+
+    }
+
+    @include mediaquery(ipad) {
+        max-width: $icono-medium;
+
+    }
+
+    @include mediaquery(escritorio) {
+        max-width: $icono-large;
+
+    }
+
+}
+
 
 
 

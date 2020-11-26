@@ -47,6 +47,11 @@ $color-texto-boton-enviar: $blanco;
 $color-fondo-boton-enviar: $naranja;
 
 
+//-------------------- TAMAÑOS ICONOS -------------------- //
+$icono-small: calcularrem(40px);
+$icono-medium: calcularrem(48px);
+$icono-large: calcularrem(79px);
+
 //-------------------- HEIGHTS NAV -------------------- //
 $nav-height-small: calcularrem(50px);
 $nav-height-medium: calcularrem(60px);
