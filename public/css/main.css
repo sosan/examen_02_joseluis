@@ -2,37 +2,98 @@
 /* IMPORTAR PARCIALES PARA COMPILAR */
 /* **************************** */
 /* **************************** */
-/* VARIABLES */
-/* **************************** */
-/* **************************** */
 /* FUNCTIONS */
 /* **************************** */
 /* **************************** */
 /* MIXINS */
 /* **************************** */
+/* MIXIN MEDIA QUERY'S*/
+/* **************************** */
+/* VARIABLES */
+/* **************************** */
 /* **************************** */
 /* TIPOGRAFIA */
 /* **************************** */
 @font-face {
-  font-family: "arialblack";
-  src: url("../font/arial-black.woff2") format("woff2"), url("../font/arial-black.woff") format("woff");
-}
-@font-face {
-  font-family: "arialregular";
-  src: url("../font/arial-regular.woff2") format("woff2"), url("../font/arial-regular.woff") format("woff");
-}
-@font-face {
   font-family: "robotoregular";
-  src: url("../font/roboto-regular.woff2") format("woff2"), url("../font/roboto-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  src: url("../assets/font/roboto-regular.woff2") format("woff2"), url("../assets/font/roboto-regular.woff") format("woff");
+  font-display: swap;
 }
 body {
-  font-family: "roboto", "arial", sans-serif;
-  font-size: 16px;
+  font-family: "robotoregular", sans-serif;
+  font-size: 1rem;
+  color: black;
+}
+
+.header__header-nav {
+  font-size: 1.125rem;
 }
 
 /* **************************** */
 /* HEADER */
 /* **************************** */
+.header {
+  background-color: #c4c4c4;
+  height: 3.125rem;
+  width: 100%;
+}
+
+@media only screen and (max-device-width: 319px) and (orientation: portrait) {
+  .header__header-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) and (orientation: portrait) {
+  .header__header-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1365px) {
+  .header__header-nav {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    font-size: 35px;
+  }
+}
+@media only screen and (min-width: 1366px) {
+  .header-nav__label {
+    display: none;
+  }
+}
+
+.header-nav__ul-header {
+  display: none;
+}
+
+@media only screen and (min-width: 1366px) {
+  .header-nav__ul-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    height: 100%;
+    width: 100%;
+  }
+}
+
 /* **************************** */
 /* FOOTER */
 /* **************************** */
@@ -60,6 +121,11 @@ body {
 /* **************************** */
 /* INDEX */
 /* **************************** */
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
 /* **************************** */
 /* CONTACT */
 /* **************************** */

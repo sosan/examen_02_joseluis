@@ -2,4 +2,112 @@
 /* HEADER */
 /* **************************** */
 
+.header
+{
+    
+    background-color: $color-fondo-header;
+    height: $nav-height;
+    width: 100%;
+
+    
+}
+
+
+.centrado{
+}
+
+
+
+.header__header-nav
+{
+    
+
+
+    @include mediaquery(mobil-peke)
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        
+
+    };
+    
+    @include mediaquery(mobil)
+    {
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    };
+
+    
+    // mixin fallo
+    // @include mediaquery(ipad)
+    // {
+    // };
+
+    
+    
+    
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1365px) {
+
+    .header__header-nav
+    {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        font-size: 35px;
+    }
+}
+
+
+
+.header-nav__label
+{
+    @include mediaquery(escritorio)
+    {
+        display: none;
+    }
+
+}
+
+.header-nav__ul-header
+{
+    display: none;
+}
+
+.header-nav__ul-header 
+{
+
+    @include mediaquery(escritorio) 
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: $gap-small-percentage;
+        height: 100%;
+        width: 100%;
+        
+        
+    }
+    
+    
+}
+
+
+
+
+
 

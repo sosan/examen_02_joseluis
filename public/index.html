@@ -40,14 +40,26 @@
       <!-- *** ESTRUCTURA SEMÁNTICA ***-->
       <!-- Header (encabezado de la página, zona superior)-->
       <!-- Encabezado-->
-      <header class="header"></header>
+      <header class="header">
+        <nav class="header__header-nav">
+          <label class="header-nav__label" for="click"><img src="./assets/img/svg/menu_hamburguesa.svg" alt="icono menu hamburguesa"></label>
+          <input class="header-nav__input" type="checkbox" name="click" id="click">
+          <ul class="header-nav__ul-header">
+            <li class="ul-header__menu__index"><a class="header-nav__inicio" href="#">Inicio</a>
+            </li>
+            <li class="ul-header__menu__proyectos"><a class="header-nav__proyectos" href="proyectos.html">Proyectos</a>
+            </li>
+            <li class="ul-header__menu__quienes"><a class="header-nav__quienes" href="quienes.html">Quienes somos</a>
+            </li>
+            <li class="ul-header__menu__contactar"><a class="header-nav__contactar" href="contactar.html">Contactar</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
       <!-- Main (centro de la página, zona central)-->
       <main class="main">
       </main>
       <!-- Footer (final de la página, zona inferior)-->
-      <footer class="footer">
-        <h6>&copy; Copyright 2020 - Toni Ferra</h6>
-      </footer>
     </div>
   </body>
 </html>

@@ -3,15 +3,16 @@
 /* **************************** */
 
 //-------------------- FONT FAMILY --------------------//
-$font-primary: "arialregular";
-$font-secondary: "arialblack";
+$font-primary: "robotoregular";
+$font-secondary: "arial";
 
 
 //-------------------- Font sizes --------------------//
 $font-size-base: calcularrem(16px);
-$font-size-importante: calcularrem(18px);
-$font-size-titulo: calcularrem(36px);
 
+$font-size-nav: calcularrem(18px);
+
+$font-size-titulo: calcularrem(36px);
 $font-size-seleccionado: calcularrem(18px);
 $font-size-boton: calcularrem(18px);
 
@@ -19,6 +20,7 @@ $font-size-boton: calcularrem(18px);
 //-------------------- COLORES --------------------//
 $blanco: rgb(255, 255, 255);
 $negro: rgb(0, 0, 0);
+
 $gris: #c4c4c4;
 $beige: rgb(248, 246, 238);
 $naranja: rgb(242, 98, 74);
@@ -27,7 +29,7 @@ $naranja-claro: rgb(255, 230, 209);
 
 //-------------------- COLORES SEMANTICOS --------------------//
 $color-fondo: $blanco;
-$color-fondo-banner: $naranja-claro;
+$color-fondo-header: $gris;
 $color-fondo-parrafos: $beige;
 $color-fondo-footer: $gris;
 
@@ -37,6 +39,10 @@ $color-texto-seleccionado: $naranja;
 $color-placeholder: $gris;
 $color-texto-boton-enviar: $blanco;
 $color-fondo-boton-enviar: $naranja;
+
+
+//-------------------- HEIGHTS NAV -------------------- //
+$nav-height: calcularrem(50px);
 
 //-------------------- HEIGHTS GRIDS -------------------- //
 $grid-height: calcularrem(580px);
@@ -53,7 +59,7 @@ $width-navigation: 10ch;
 
 //-------------------- Gap flex-box -------------------- //
 $gap-small-percentage: 5%;
-$gap-small-rem: calcularrem(20px);
+$gap-small-rem: calcularrem(57px);
 
 //-------------------- Dispositivos sizes -------------------- //
 $desktop-small: 700px; // Dispositivos de 700px

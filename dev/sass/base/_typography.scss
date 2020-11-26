@@ -2,8 +2,7 @@
 /* TIPOGRAFIA */
 /* **************************** */
 
-@include font-face("arialregular", "arial-regular");
-@include font-face("arialblack", "arial-black");
+@include font-face("robotoregular", "roboto-regular");
 
 body {
     font-family: $font-primary, sans-serif;
@@ -11,3 +10,10 @@ body {
     color: $color-texto-base;
 
 }
+
+
+.header__header-nav
+{
+    font-size: $font-size-nav;
+}
+
