@@ -22,3 +22,12 @@ block header
     include ../templates/_header.pug
 
 block main
+    ul.main__listadoimagenes
+        li.listadoimagenes__mujer
+            +picture("cara_mujer.webp", "cara mujer recien levantada", "picture__clase")
+        li.listadoimagenes__perro
+            +picture("perro.webp", "perro muy simpatico y sonriente", "picture__clase")
+        li.listadoimagenes__hombre
+            +picture("cara_hombre.webp", "cara hombre preocupado", "picture__clase")
+        li.listadoimagenes__gato
+            +picture("gato.webp", "gato gris con ojos saltones", "picture__clase")
