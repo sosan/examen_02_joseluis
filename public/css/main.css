@@ -210,6 +210,24 @@ body {
   }
 }
 
+.listadoimagenes__perro,
+.listadoimagenes__gato {
+  position: relative;
+}
+
+.seleccion {
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1365px) and (orientation: portrait) {
+  .seleccion {
+    top: 50%;
+    left: -6px;
+    transform: rotate(-90deg);
+  }
+}
+
 /* **************************** */
 /* CONTACT */
 /* **************************** */

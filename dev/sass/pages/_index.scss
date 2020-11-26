@@ -81,3 +81,25 @@ body
     object-fit: fill;
 }
 
+
+.listadoimagenes__perro,
+.listadoimagenes__gato
+{
+    position: relative;
+}
+
+
+.seleccion
+{
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    @include mediaquery(ipad)
+    {
+        top: 50%;
+        left: -6px;
+        transform: rotate(-90deg);
+    }
+}
