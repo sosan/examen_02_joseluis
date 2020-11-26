@@ -1,0 +1,207 @@
+/* **************************** */
+/* MIXINS */
+/* **************************** */
+//-------------------- font face autogenerado --------//
+@mixin font-face($nombre, $nombrearchivo, $negrita: normal, $estilo: normal) {
+
+    @font-face {
+        font-family: "#{$nombre}";
+        font-weight: $negrita;
+        font-style: $estilo;
+
+        src: url("../assets/font/"+ $nombrearchivo + ".woff2") format("woff2"),
+            url("../assets/font/"+ $nombrearchivo + ".woff") format("woff");
+
+        font-display: swap;
+
+    }
+
+}
+
+
+// Mixin - Background Image con posX posY
+@mixin backgroundimage($url, $posX, $posY, $size, $rep: no-repeat, $att: scroll) {
+    @if ($posX==center) {
+        @include backgroundimagecenter($url, center, $posY, $rep, $att)
+    }
+
+    @else if ($posY==center) {
+        @include backgroundimagecenter($url, center, $posY, $rep, $att)
+    }
+
+    @else {
+        background-image: url("#{$url}");
+        background-position: $posX $posY;
+
+        background-size: $size;
+        background-repeat: $rep;
+        background-attachment: $att;
+        object-fit: $size;
+
+    }
+
+
+}
+
+// Mixin - Background Image con posicion center
+@mixin backgroundimagecenter($url, $position, $size, $rep: no-repeat, $att: scroll) {
+    background-image: url("#{$url}");
+
+    @if ($position==center) {
+        background-position: center;
+    }
+
+    background-size: $size;
+    background-repeat: $rep;
+    background-attachment: $att;
+    object-fit: $size;
+}
+
+
+
+
+// mixin gradiente de izquierda a derecha
+@mixin linear-gradient-right($colorOrigen, $colorDestino) {
+    background: $colorDestino;
+    background: linear-gradient(to right, $colorOrigen 0%, $colorDestino 100%);
+}
+
+// mixin gradiente de derecha a izquierda
+@mixin linear-gradient-left($colorOrigen, $colorDestino) {
+    background: $colorDestino;
+    background: linear-gradient(to left, $colorOrigen 0%, $colorDestino 100%);
+}
+
+// mixin gradiente de abajo a arriba
+@mixin linear-gradient-top($colorOrigen, $colorDestino) {
+    background: $colorDestino;
+    background: linear-gradient(to top, $colorOrigen 0%, $colorDestino 100%);
+}
+
+// mixin gradiente de arriba a abajo
+@mixin linear-gradient-bottom($colorOrigen, $colorDestino) {
+    background: $colorDestino;
+    background: linear-gradient(to bottom, $colorOrigen 0%, $colorDestino 100%);
+}
+
+
+//-------------------- COLORIZAR LINK --------//
+@mixin link-format($colortexto, $colorvisit, $colorhover, $coloractive) {
+    a {
+
+        color: $colortexto;
+
+        &:visited {
+            color: $colorvisit;
+        }
+
+        &:hover {
+            color: $colorhover;
+
+        }
+
+        &:active {
+            color: $coloractive;
+        }
+
+    }
+
+
+}
+
+// ----- generar boton -------
+@mixin boton-format($colorTexto, $bg, $bordercolor, $border: 0px, $border-radius: 25px, $pad: 1rem, $font-size: $font-size-base) {
+    color: $colorTexto;
+    background-color: $bg;
+
+    @if $border>0 {
+        border: $border solid $bordercolor;
+
+    }
+
+    border-radius: calcularrem($border-radius);
+    padding: calcularrem($pad);
+    font-size: calcularrem($font-size);
+
+}
+
+//--- generar un input
+@mixin input-format($heigh: 40px, $bordercolor: black, $sizeborder: 1px, $bgcolor: white, $textcolor: black,
+    $textofontplaceholder: sans-serif, $textcolorplaceholder: gray,
+    $paddingtop: 0.3rem, $paddingright: 0.5rem, $paddingbottom: 0.3rem, $paddingleft: 0.5rem) {
+
+    // width: 50ch;
+    width: 100%;
+    height: calcularrem($heigh);
+    box-sizing: border-box;
+
+    // padding-top: map-get($map: $paddings, $key: inputs); //0.3rem;
+    padding-top: $paddingtop;
+    padding-right: $paddingright;
+    padding-bottom: $paddingbottom;
+    padding-left: $paddingleft;
+
+    border: $sizeborder solid $bordercolor;
+    background-color: $bgcolor; //map-get($colores, color_blanco);
+    color: $textcolor;
+
+    &::placeholder {
+        font-family: $textofontplaceholder;
+        color: $textcolorplaceholder;
+    }
+}
+
+//@for $i from 1 through length($conditions)
+
+
+/* MIXIN MEDIA QUERY'S*/
+@mixin mediaquery($query)
+{
+
+    // Objeto queries
+    $queries: (
+        mobil-peke: '(max-device-width: #{$breakpoint-small - 1}) and (orientation: portrait)',
+        mobil: '(min-device-width: #{$breakpoint-small}) and (max-device-width: #{($breakpoint-small + 100) - 1}) and (orientation: portrait)',
+        ipad: '(min-device-width: #{$breakpoint-medium}) and (max-device-width: #{($breakpoint-medium + 100) - 1}) and (orientation: portrait)',
+        ipad-horiz: '(min-device-width: #{$breakpoint-medium}) and (orientation: landscape)',
+        escritorio: '(min-width: #{$breakpoint-large})'
+    );
+
+    // Ejecución
+    @if map-has-key($queries, $query) {
+        $query-value: map-get($queries, $query);
+
+        @media only screen and #{$query-value} {
+            @content;
+        }
+    }
+
+    @else {
+        @warn 'Problemas con'+$query;
+    }
+}
+
+
+@mixin desktoplarge {
+    @media (min-width: #{$breakpoint-large-desktop}) 
+    {
+        @content;
+    }
+}
+
+
+@mixin desktop {
+    @media (min-width: #{$breakpoint-desktop}) 
+    {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$breakpoint-tablet}) 
+    {
+        @content;
+    }
+}
+
+
