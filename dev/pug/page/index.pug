@@ -26,10 +26,22 @@ block main
         li.listadoimagenes__mujer
             +picture("cara_mujer.webp", "cara mujer recien levantada", "picture__clase")
         li.listadoimagenes__perro
-            +picture("perro.webp", "perro muy simpatico y sonriente", "picture__clase")
+            figure.perro__figure
+                +picture("perro.webp", "perro muy simpatico y sonriente", "picture__clase")
+                figcaption.figure__figcaption
+                    h3.titulo__negrita
+                        | Ana Perez & “Superman”
+                    p.parrafo__texto
+                        | “Superman” vive con su dueña desde hace 3 años. Pastor alemán.
             img(class="seleccion", src="./assets/img/svg/flecha_seleccion.svg", alt="seleccion de quien es el amo")
         li.listadoimagenes__hombre
             +picture("cara_hombre.webp", "cara hombre preocupado", "picture__clase")
         li.listadoimagenes__gato
-            +picture("gato.webp", "gato gris con ojos saltones", "picture__clase")
-            img(class="seleccion", src="./assets/img/svg/flecha_seleccion.svg", alt="seleccion de quien es el amo")
+            figure.gato__figure
+                +picture("gato.webp", "gato gris con ojos saltones", "picture__clase")
+                img(class="seleccion", src="./assets/img/svg/flecha_seleccion.svg", alt="seleccion de quien es el amo")
+                figcaption.figure__figcaption
+                    h3.titulo__negrita
+                        | David Socias & “Gatito”
+                    p.parrafo__texto
+                        | “Gatito” vive con su dueño desde hace 2 meses. Toyger.

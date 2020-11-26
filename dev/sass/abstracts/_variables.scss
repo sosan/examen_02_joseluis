@@ -13,6 +13,9 @@ $font-size-base: calcularrem(16px);
 $font-size-nav: calcularrem(18px);
 $font-size-logotipo-desktop: calcularrem(39px);
 
+$font-size-titulo-figure: calcularrem(18px);
+$font-size-titulo-parrafo: calcularrem(16px);
+
 $font-size-titulo: calcularrem(36px);
 $font-size-seleccionado: calcularrem(18px);
 $font-size-boton: calcularrem(18px);
@@ -23,7 +26,9 @@ $blanco: rgb(255, 255, 255);
 $negro: rgb(0, 0, 0);
 
 $gris: #c4c4c4;
-$beige: rgb(248, 246, 238);
+$blanco-transparente: rgba(255, 255, 255, 0.65);
+
+$beige: rgb(238, 218, 215);
 $naranja: rgb(242, 98, 74);
 $naranja-claro: rgb(255, 230, 209);
 
